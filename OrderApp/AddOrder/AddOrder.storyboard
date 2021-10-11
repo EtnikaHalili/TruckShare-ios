@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Order View Controller-->
+        <scene sceneID="iu4-Xg-b3b">
+            <objects>
+                <viewController storyboardIdentifier="AddOrderViewController" modalPresentationStyle="overFullScreen" id="2h5-pT-w5x" customClass="AddOrderViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cFM-V0-9dM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psB-n4-vfJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbC-eN-SSN">
+                                        <rect key="frame" x="20" y="100" width="374" height="696"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="As7-JN-3H9">
+                                                <rect key="frame" x="324" y="15" width="35" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="EiD-F4-VED"/>
+                                                    <constraint firstAttribute="height" constant="35" id="z6n-kw-fIa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="xButtonPressed:" destination="2h5-pT-w5x" eventType="touchUpInside" id="Tzw-Yy-hcN"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8c1-HQ-Jny" customClass="TextField" customModule="OrderApp" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="100" width="344" height="38"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="Ddb-EW-rMs"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cp-de-lz7" customClass="TextField" customModule="OrderApp" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="153" width="344" height="38"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="GIe-Kf-WM6"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product weight" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bp2-jc-Ox9" customClass="TextField" customModule="OrderApp" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="206" width="344" height="38"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="MdU-O2-8lM"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Product details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-4J-pXa" customClass="TextField" customModule="OrderApp" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="259" width="344" height="38"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="CL8-5k-Dvg"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-rv-1pf">
+                                                <rect key="frame" x="130.5" y="19" width="113" height="27.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3C-u3-tjS">
+                                                <rect key="frame" x="40" y="628" width="294" height="38"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="YFN-aM-iqR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                <state key="normal" title="Add">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="addButtonPressed:" destination="2h5-pT-w5x" eventType="touchUpInside" id="r4t-jW-9QI"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vt1-Hn-nn3" customClass="TextField" customModule="OrderApp" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="312" width="344" height="38"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="YZY-sp-vHH"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.95437735319999994" green="0.76195329430000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="WUe-4J-pXa" firstAttribute="trailing" secondItem="Bp2-jc-Ox9" secondAttribute="trailing" id="2pm-CP-MkW"/>
+                                            <constraint firstItem="vt1-Hn-nn3" firstAttribute="trailing" secondItem="WUe-4J-pXa" secondAttribute="trailing" id="5QT-vG-pxx"/>
+                                            <constraint firstItem="vt1-Hn-nn3" firstAttribute="top" secondItem="WUe-4J-pXa" secondAttribute="bottom" constant="15" id="66B-Uu-M6c"/>
+                                            <constraint firstAttribute="bottom" secondItem="U3C-u3-tjS" secondAttribute="bottom" constant="30" id="6ok-20-i5U"/>
+                                            <constraint firstItem="WUe-4J-pXa" firstAttribute="top" secondItem="Bp2-jc-Ox9" secondAttribute="bottom" constant="15" id="9C4-Eg-ybF"/>
+                                            <constraint firstItem="8c1-HQ-Jny" firstAttribute="leading" secondItem="xbC-eN-SSN" secondAttribute="leading" constant="15" id="C3j-is-EGF"/>
+                                            <constraint firstItem="Bp2-jc-Ox9" firstAttribute="leading" secondItem="8c1-HQ-Jny" secondAttribute="leading" id="D2A-WI-duo"/>
+                                            <constraint firstItem="0cp-de-lz7" firstAttribute="top" secondItem="8c1-HQ-Jny" secondAttribute="bottom" constant="15" id="G3T-Xe-6yg"/>
+                                            <constraint firstItem="wE8-rv-1pf" firstAttribute="centerX" secondItem="xbC-eN-SSN" secondAttribute="centerX" id="PaF-sc-CYv"/>
+                                            <constraint firstItem="vt1-Hn-nn3" firstAttribute="leading" secondItem="WUe-4J-pXa" secondAttribute="leading" id="Rwq-qP-WzW"/>
+                                            <constraint firstItem="WUe-4J-pXa" firstAttribute="leading" secondItem="Bp2-jc-Ox9" secondAttribute="leading" id="Znq-cC-ebG"/>
+                                            <constraint firstAttribute="trailing" secondItem="U3C-u3-tjS" secondAttribute="trailing" constant="40" id="aD4-Mr-ugh"/>
+                                            <constraint firstItem="Bp2-jc-Ox9" firstAttribute="top" secondItem="0cp-de-lz7" secondAttribute="bottom" constant="15" id="aEs-3T-eXz"/>
+                                            <constraint firstItem="As7-JN-3H9" firstAttribute="top" secondItem="xbC-eN-SSN" secondAttribute="top" constant="15" id="cUq-6k-WQN"/>
+                                            <constraint firstItem="wE8-rv-1pf" firstAttribute="centerY" secondItem="As7-JN-3H9" secondAttribute="centerY" id="cWe-pu-Xm8"/>
+                                            <constraint firstItem="8c1-HQ-Jny" firstAttribute="top" secondItem="As7-JN-3H9" secondAttribute="bottom" constant="50" id="gwd-Ss-3yg"/>
+                                            <constraint firstAttribute="trailing" secondItem="8c1-HQ-Jny" secondAttribute="trailing" constant="15" id="jP8-d0-NzF"/>
+                                            <constraint firstItem="0cp-de-lz7" firstAttribute="leading" secondItem="8c1-HQ-Jny" secondAttribute="leading" id="rEU-Zg-MDN"/>
+                                            <constraint firstItem="Bp2-jc-Ox9" firstAttribute="trailing" secondItem="8c1-HQ-Jny" secondAttribute="trailing" id="tCT-pT-GDG"/>
+                                            <constraint firstAttribute="trailing" secondItem="As7-JN-3H9" secondAttribute="trailing" constant="15" id="tFU-TM-grl"/>
+                                            <constraint firstItem="0cp-de-lz7" firstAttribute="trailing" secondItem="8c1-HQ-Jny" secondAttribute="trailing" id="wIC-FP-G76"/>
+                                            <constraint firstItem="U3C-u3-tjS" firstAttribute="leading" secondItem="xbC-eN-SSN" secondAttribute="leading" constant="40" id="wMF-VJ-cEZ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="xbC-eN-SSN" firstAttribute="leading" secondItem="psB-n4-vfJ" secondAttribute="leading" constant="20" id="0UU-vT-QWH"/>
+                                    <constraint firstAttribute="bottom" secondItem="xbC-eN-SSN" secondAttribute="bottom" constant="100" id="7an-LL-Vsg"/>
+                                    <constraint firstAttribute="trailing" secondItem="xbC-eN-SSN" secondAttribute="trailing" constant="20" id="kIb-hd-i9N"/>
+                                    <constraint firstItem="xbC-eN-SSN" firstAttribute="top" secondItem="psB-n4-vfJ" secondAttribute="top" constant="100" id="yRh-cS-J19"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C6Y-yw-4uk"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="psB-n4-vfJ" firstAttribute="leading" secondItem="C6Y-yw-4uk" secondAttribute="leading" id="RWd-m8-4fB"/>
+                            <constraint firstItem="psB-n4-vfJ" firstAttribute="trailing" secondItem="C6Y-yw-4uk" secondAttribute="trailing" id="o8C-sf-e72"/>
+                            <constraint firstAttribute="bottom" secondItem="psB-n4-vfJ" secondAttribute="bottom" id="sY6-kO-I6r"/>
+                            <constraint firstItem="psB-n4-vfJ" firstAttribute="top" secondItem="cFM-V0-9dM" secondAttribute="top" id="sbe-PJ-QSz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="WUe-4J-pXa" id="rde-Lq-Edm"/>
+                        <outlet property="deliveryAddressTextField" destination="vt1-Hn-nn3" id="Km7-E4-hqe"/>
+                        <outlet property="productNameTextField" destination="8c1-HQ-Jny" id="Ya8-Kn-6Sa"/>
+                        <outlet property="productPriceTextField" destination="0cp-de-lz7" id="IT7-V5-buG"/>
+                        <outlet property="productWeightTextField" destination="Bp2-jc-Ox9" id="yGJ-AI-wL0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1wE-87-ex7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.36231884057972" y="80.357142857142847"/>
+        </scene>
+    </scenes>
+</document>
