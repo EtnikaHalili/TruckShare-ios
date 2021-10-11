@@ -18,11 +18,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         setupUI()
         setupTableView()
         retrieveData()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("reloadData"), object: nil)
         // Do any additional setup after loading the view.
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
+    @objc func methodOfReceivedNotification(notification: Notification) {
         retrieveData()
+        self.scrollToBottom()
     }
     func setupUI(){
         self.topContainerView.showShadow()
@@ -50,12 +51,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         do{
             let results = try managedContex.fetch(request)
             self.userData = results as? [NSManagedObject]
+            self.tableView.reloadData()
             for data in results as! [NSManagedObject]{
-                print("full: \(data.value(forKey: "fullName") ?? "")")
             }
         }
         catch{
             print("failed")
+        }
+    }
+    func scrollToBottom(){
+        guard let userArr = userData else {return}
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: userArr.count-1, section: 0)
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
         }
     }
     //IBActions
@@ -74,6 +82,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(OrdersTableViewCell.self, for: indexPath)
         cell.selectionStyle = .none
+        if let userDetails = userData{
+            cell.nameLabel.text = "\(userDetails[indexPath.row].value(forKey: "fullName") ?? "")"
+            cell.addressLabel.text = "\(userDetails[indexPath.row].value(forKey: "address") ?? "")"
+            cell.dateLabel.text = "\(userDetails[indexPath.row].value(forKey: "date") ?? "")"
+            cell.timeLabel.text = "\(userDetails[indexPath.row].value(forKey: "time") ?? "")"
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

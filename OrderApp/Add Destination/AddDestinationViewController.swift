@@ -93,6 +93,7 @@ class AddDestinationViewController: UIViewController, UITextFieldDelegate {
             do {
                 try managedContex.save()
                 print("data saved")
+                NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
                 self.dismiss(animated: true, completion: nil)
             }
             catch let error as NSError{

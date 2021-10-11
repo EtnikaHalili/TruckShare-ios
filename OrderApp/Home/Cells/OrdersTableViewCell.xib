@@ -113,7 +113,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="addressLabel" destination="upy-qF-cW4" id="0VA-Wy-cDf"/>
+                <outlet property="dateLabel" destination="1Rl-r1-dao" id="aQe-ef-P09"/>
                 <outlet property="mainContainer" destination="ZrI-90-k0T" id="TeZ-Mf-DtZ"/>
+                <outlet property="nameLabel" destination="15g-A7-VGU" id="odJ-KV-2eS"/>
+                <outlet property="timeLabel" destination="Yi3-OL-9R5" id="XsW-9P-zP8"/>
             </connections>
             <point key="canvasLocation" x="160.1449275362319" y="148.99553571428569"/>
         </tableViewCell>
